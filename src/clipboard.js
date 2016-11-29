@@ -16,6 +16,7 @@ class Clipboard extends Emitter {
 
         this.resolveOptions(options);
         this.listenClick(trigger);
+        this.clipboard_element = trigger;
     }
 
     /**

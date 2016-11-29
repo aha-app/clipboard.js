@@ -52,7 +52,7 @@ class ClipboardAction {
         this.fakeHandlerCallback = () => this.removeFake();
         this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
 
-        this.fakeElem = document.createElement('textarea');
+        this.fakeElem = document.createElement('input');
         // Prevent zooming on iOS
         this.fakeElem.style.fontSize = '12pt';
         // Reset box model
