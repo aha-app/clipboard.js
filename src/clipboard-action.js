@@ -52,12 +52,7 @@ class ClipboardAction {
         this.fakeHandlerCallback = () => this.removeFake();
         this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
 
-        var elem_type_to_copy = 'input'
-        if (this.trigger.getAttribute('data-use-textarea') == 'true'){
-            elem_type_to_copy = 'textarea'
-        }
-
-        this.fakeElem = document.createElement(elem_type_to_copy);
+        this.fakeElem = document.createElement('textarea');
 
         // Make sure to render a plain textarea (otherwise tinymce will load)
         this.fakeElem.className = 'plain'
