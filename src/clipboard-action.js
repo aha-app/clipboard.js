@@ -52,7 +52,11 @@ class ClipboardAction {
         this.fakeHandlerCallback = () => this.removeFake();
         this.fakeHandler = document.body.addEventListener('click', this.fakeHandlerCallback) || true;
 
-        this.fakeElem = document.createElement('input');
+        this.fakeElem = document.createElement('textarea');
+
+        // Make sure to render a plain textarea (otherwise tinymce will load)
+        this.fakeElem.className = 'plain'
+
         // Prevent zooming on iOS
         this.fakeElem.style.fontSize = '12pt';
         // Reset box model
