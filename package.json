@@ -1,5 +1,5 @@
 {
-  "name": "clipboard",
+  "name": "@aha-app/clipboard",
   "version": "1.5.16",
   "description": "Modern copy to clipboard. No Flash. Just 2kb",
   "repository": "zenorocha/clipboard.js",
@@ -9,6 +9,9 @@
     "clipboard",
     "copy",
     "cut"
+  ],
+  "files": [
+    "lib/*"
   ],
   "dependencies": {
     "good-listener": "^1.2.0",
